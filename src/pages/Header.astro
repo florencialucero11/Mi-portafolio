@@ -1,0 +1,41 @@
+---
+const { t } = Astro.props;
+
+import DarkModeToggle from '../components/DarkModeToggle.jsx';
+import DownloadCV from '../components/DownloadCV.astro';
+---
+<header class="relative flex flex-col md:flex-row items-center justify-between gap-6 py-6 px-8 bg-gradient-to-r from-bgDarker to-bgDarkest shadow-xl">
+  <!-- Info izquierda -->
+  <div class="flex flex-col items-center md:items-start text-center md:text-left">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryLight animate-pulse">
+      Florencia Lucero
+    </h1>
+    <p class="text-textLight mt-2 text-base md:text-lg">
+      Fullstack Developer & IA Enthusiast
+    </p>
+  </div>
+
+  <!-- Avatar central -->
+  <div class="relative">
+    <img 
+      src="/avatar4.png" 
+      alt="Florencia Lucero"
+      class="w-35 h-35 md:w-48 md:h-46 rounded-full border-4 border-primary shadow-2xl hover:scale-116 transition-transform duration-500 animate-avatarIntro" 
+    />
+    <div class="absolute inset-0 rounded-full bg-primary opacity-30 blur-3xl animate-pulse"></div>
+  </div>
+
+  <!-- Navegación y toggles -->
+  <div class="flex flex-col md:flex-row items-center gap-4">
+    <nav class="flex gap-4">
+      <a href="#about" class="text-textLight hover:text-primaryLight font-medium transition-colors">{t.about}</a>
+      <a href="#projects" class="text-textLight hover:text-primaryLight font-medium transition-colors">{t.projects}</a>
+      <a href="#skills" class="text-textLight hover:text-primaryLight font-medium transition-colors">{t.skills}</a>
+      <a href="#contact" class="text-textLight hover:text-primaryLight font-medium transition-colors">{t.contact}</a>
+    </nav>
+    <div class="flex gap-2">
+      <DownloadCV />
+      <DarkModeToggle client:load />
+    </div>
+  </div>
+</header>

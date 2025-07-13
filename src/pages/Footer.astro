@@ -1,0 +1,20 @@
+---
+const year = new Date().getFullYear();
+const socialLinks = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/florencialucerodeva/" },
+  { name: "GitHub", url: "https://github.com/florencialucero11" },
+];
+---
+
+<footer class="bg-bgDarker text-textLight text-center py-8 mt-16 border-t border-primary">
+  <p class="text-sm mb-4">
+    © {year} Florencia Lucero — Construyendo futuro con pasión y código.
+  </p>
+  <div class="flex justify-center gap-8 text-primaryLight">
+    {socialLinks.map(link => (
+      <a href={link.url} target="_blank" rel="noopener noreferrer" class="hover:text-primaryLight/80 transition-all font-semibold">
+        {link.name}
+      </a>
+    ))}
+  </div>
+</footer>

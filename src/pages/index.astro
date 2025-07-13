@@ -1,16 +1,54 @@
 ---
+import Header from '../pages/Header.astro';
+import Footer from '../pages/Footer.astro';
+import Contact from '../pages/Contact.astro';
 
+import About from '../pages/About.jsx';
+import Projects from '../pages/Projects.jsx';
+import Skills from '../pages/Skills.jsx';
+
+import { texts } from '../data/texts.js';
+import { projects } from '../data/projects.js';
+import { projectsTexts } from '../data/projectsTexts.js';
+import { header } from '../data/header.js';
+import { skillsTexts } from '../data/skills.js';
+import { contact } from '../data/contact.js';
+import { footer } from '../data/footer.js';
+import '../styles/global.css';
+// Detectar idioma desde URL o default 'es'
+const langParam = Astro.url.searchParams.get("lang");
+const lang = (langParam === 'es' || langParam === 'en') ? langParam : 'es';
+
+// Traer textos traducidos según idioma
+const tHeader = header[lang];
+const tAbout = texts[lang];
+const tProjects = projectsTexts[lang];
+const projectList = projects[lang];
+const tSkills = skillsTexts[lang];
+const tContact = contact[lang];
+const tFooter = footer[lang];
 ---
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florencia Lucero - Portfolio</title>
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+  </head>
+  <body class="bg-bgDarker text-text">
+    <Header t={tHeader} lang={lang} />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <main class="max-w-6xl mx-auto px-4 space-y-12">
+      <About t={tAbout} client:load />
+      <Projects t={tProjects} projectList={projectList} client:load />
+      <Skills t={tSkills} lang={lang} client:load />
+      <Contact t={tContact} lang={lang} />
+    </main>
+
+    <Footer t={tFooter} lang={lang} />
+
+    <!-- Opcional: tus scripts si los querés mantener -->
+    <script src="/projects-scroll.js" defer></script>
+  </body>
 </html>

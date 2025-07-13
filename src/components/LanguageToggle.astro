@@ -1,0 +1,7 @@
+---
+const { lang } = Astro.props;
+const nextLang = lang === "es" ? "en" : "es";
+---
+<a href={`?lang=${nextLang}`} class="p-2 rounded bg-primary hover:bg-primaryLight text-bg-darker transition">
+  {lang === 'es' ? 'EN' : 'ES'}
+</a>

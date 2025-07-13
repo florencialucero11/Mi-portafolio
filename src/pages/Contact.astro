@@ -1,0 +1,144 @@
+---
+const { t } = Astro.props;
+
+const contactInfo = {
+  email: "florenciadevamatias@gmail.com",
+  linkedin: "https://www.linkedin.com/in/florencialucerodeva/",
+  github: "https://github.com/florencialucero11"
+};
+---
+
+<section
+  id="contact"
+  class="relative py-20 px-8 max-w-7xl mx-auto rounded-3xl bg-gradient-to-b from-primaryLight  shadow-xl overflow-hidden"
+  aria-label="Sección de contacto"
+>
+  <div class="flex flex-col md:flex-row gap-16 max-w-5xl mx-auto text-light">
+  
+    <div class="flex-1 flex flex-col justify-center animate-fadeInLeft">
+      <h2 class="text-5xl font-extrabold mb-8 text-primaryLight bg-gradient-to-r from-bgDarker to-primary-500 bg-clip-text text-transparent drop-shadow-glow">
+       { `${t.title}` }
+      </h2>
+
+      <p class="mb-12 text-lg leading-relaxed max-w-lg">
+       {t.description}
+      </p>
+
+      <ul class="space-y-6 text-lg">
+        <li class="flex items-center gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primaryLight"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12h-1m-4 0H7m8-4v8m-4-8v8" />
+          </svg>
+          <a
+            href={`mailto:${contactInfo.email}`}
+            class="hover:underline hover:text-primaryLight transition-colors"
+            aria-label="Enviar email"
+          >
+            {contactInfo.email}
+          </a>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primaryLight"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.28c-.967 0-1.75-.793-1.75-1.77 0-.978.783-1.77 1.75-1.77s1.75.792 1.75 1.77c0 .977-.783 1.77-1.75 1.77zm13.5 12.28h-3v-5.6c0-1.4-.5-2.35-1.75-2.35-1 0-1.5.66-1.75 1.3-.1.25-.1.6-.1.95v5.7h-3v-11h3v1.5c.4-.6 1.1-1.5 2.75-1.5 2 0 3.5 1.3 3.5 4v6.5z"/>
+          </svg>
+          <a
+            href={contactInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline hover:text-primaryLight transition-colors"
+            aria-label="Visitar LinkedIn"
+          >
+            Perfil profesional
+          </a>
+        </li>
+        <li class="flex items-center gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-primaryLight"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.3-.54-1.522.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.654.24 2.876.12 3.176.78.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          <a
+            href={contactInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline hover:text-primaryLight transition-colors"
+            aria-label="Visitar GitHub"
+          >
+            Mis proyectos
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Parte formulario -->
+    <form
+      action={`mailto:${contactInfo.email}`}
+      method="post"
+      enctype="text/plain"
+      class="flex-1 flex flex-col gap-6 animate-fadeInRight"
+      aria-label="Formulario de contacto"
+      
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder={t.form.name}
+        required
+        aria-required="true"
+        class="p-4 rounded-xl border border-primary bg-bgDarker text-textLight placeholder:text-textLight/60 focus:outline-none focus:ring-4 focus:ring-primary transition"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder={t.form.email}
+        required
+        aria-required="true"
+        class="p-4 rounded-xl border border-primary bg-bgDarker text-textLight placeholder:text-textLight/60 focus:outline-none focus:ring-4 focus:ring-primary transition"
+      />
+      <textarea
+        name="message"
+        placeholder={t.form.message}
+        rows="6"
+        required
+        aria-required="true"
+        class="p-4 rounded-xl border border-primary bg-bgDarker text-textLight placeholder:text-textLight/60 focus:outline-none focus:ring-4 focus:ring-primary transition resize-none"
+      ></textarea>
+      <button
+        type="submit"
+        class="mt-4 bg-primary text-bgDarker rounded-full py-4 font-bold text-lg hover:bg-primaryLight shadow-lg hover:shadow-xl transition"
+      >
+        {t.form.send}
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .drop-shadow-glow {
+    filter:
+      drop-shadow(0 0 6px #3b82f6);
+  }
+  @media (min-width: 768px) {
+    section#contact > div {
+      gap: 5rem;
+    }
+  }
+</style>
