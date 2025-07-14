@@ -6,15 +6,15 @@ export default function LanguageToggle({ lang }) {
     localStorage.setItem('preferredLang', newLang);
     const url = new URL(window.location);
     url.searchParams.set('lang', newLang);
-    window.location = url.toString(); // recarga con el nuevo lang
+    window.location = url.toString(); 
   };
 
   return (
     <button
       onClick={toggleLang}
-      className="px-4 py-2 rounded bg-primary text-bgDarker font-semibold hover:bg-primaryLight transition-colors"
+      className="px-3 py-1 rounded-full bg-primary text-bgDarker text-sm font-semibold hover:bg-primaryLight transition-colors"
     >
-      {lang === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+      {lang === 'es' ? 'EN' : 'ES'}
     </button>
   );
 }

@@ -15,6 +15,7 @@ import { skillsTexts } from '../data/skills.js';
 import { contact } from '../data/contact.js';
 import { footer } from '../data/footer.js';
 import '../styles/global.css';
+import LanguageToggle from '../components/LanguageToggle.jsx';
 // Detectar idioma desde URL o default 'es'
 const langParam = Astro.url.searchParams.get("lang");
 const lang = (langParam === 'es' || langParam === 'en') ? langParam : 'es';

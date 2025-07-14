@@ -1,8 +1,9 @@
 ---
-const { t } = Astro.props;
+const { t, lang } = Astro.props;
 
 import DarkModeToggle from '../components/DarkModeToggle.jsx';
 import DownloadCV from '../components/DownloadCV.astro';
+import LanguageToggle from '../components/LanguageToggle.jsx';
 ---
 <header class="relative flex flex-col md:flex-row items-center justify-between gap-6 py-6 px-8 bg-gradient-to-r from-bgDarker to-bgDarkest shadow-xl">
   <!-- Info izquierda -->
@@ -35,6 +36,7 @@ import DownloadCV from '../components/DownloadCV.astro';
     </nav>
     <div class="flex gap-2">
       <DownloadCV />
+      <LanguageToggle lang={lang} client:load />
       <DarkModeToggle client:load />
     </div>
   </div>

@@ -21,7 +21,7 @@ export default function Projects({ t, projectList }) {
   return (
     <section 
       id="projects" 
-      className="relative py-16 px-6 bg-gradient-to-b from-bgDarker/90 to-bgDarkest/80 max-w-5xl mx-auto"
+      className="relative py-16 px-10 bg-gradient-to-b from-bgDarker/90 to-bgDarkest/80 max-w-5xl mx-auto"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryLight mb-10 text-center">
         {t.title}
