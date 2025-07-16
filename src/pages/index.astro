@@ -54,7 +54,7 @@ const tFooter = footer[lang];
 
     <Footer t={tFooter} lang={lang} />
 
-    <!-- Opcional: tus scripts si los querés mantener -->
+    <LanguageToggle lang={lang}  client:load />
     <script src="/projects-scroll.js" defer></script>
   </body>
 </html>
