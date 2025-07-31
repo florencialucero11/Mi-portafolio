@@ -30,7 +30,7 @@ export const projects = {
         "Plataforma fullstack que utiliza código QR y reconocimiento facial para controlar accesos, gestionar roles de usuario y enviar notificaciones. Explora cómo integrar hardware y software para mejorar la seguridad y la gestión de gimnasios.",
       role: "Desarrolladora Fullstack",
       tech: ["nodejs", "postgresql"],
-      repo: "https://github.com/florencialucero11/control-accesos-gym",
+      repo: "https://github.com/florencialucero11/gymaccess",
     },
   ],
   en: [
@@ -64,7 +64,7 @@ export const projects = {
         "Fullstack platform using QR codes and facial recognition to manage access, user roles, and notifications. Explores integrating hardware and software to improve security and management in gyms.",
       role: "Fullstack Developer",
       tech: ["nodejs", "postgresql"],
-      repo: "https://github.com/florencialucero11/control-accesos-gym",
+      repo: "https://github.com/florencialucero11/gymaccess",
     },
   ],
 };
