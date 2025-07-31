@@ -14,7 +14,7 @@ export const projects = {
         "Plataforma experimental que analiza CVs con IA y brinda feedback personalizado para mejorar la compatibilidad con perfiles IT y otros rubros. Un proyecto de investigación sobre cómo la inteligencia artificial puede optimizar procesos de selección.",
       role: "Desarrolladora Frontend & Backend Python",
       tech: ["react", "python"],
-      repo: "https://github.com/florencialucero11/ai-resume-analyzer",
+      repo: "https://github.com/florencialucero11/",
     },
     {
       title: "E-commerce React",
@@ -30,7 +30,7 @@ export const projects = {
         "Plataforma fullstack que utiliza código QR y reconocimiento facial para controlar accesos, gestionar roles de usuario y enviar notificaciones. Explora cómo integrar hardware y software para mejorar la seguridad y la gestión de gimnasios.",
       role: "Desarrolladora Fullstack",
       tech: ["nodejs", "postgresql"],
-      repo: "https://github.com/florencialucero11/gymaccess",
+      repo: "https://github.com/florencialucero11/gymaccess/",
     },
   ],
   en: [
@@ -48,7 +48,7 @@ export const projects = {
         "Experimental platform that uses AI to analyze resumes and deliver personalized feedback to improve compatibility with IT and other job profiles. A research project exploring how artificial intelligence can optimize hiring processes.",
       role: "Frontend & Python Backend Developer",
       tech: ["react", "python"],
-      repo: "https://github.com/florencialucero11/ai-resume-analyzer",
+      repo: "https://github.com/florencialucero11/",
     },
     {
       title: "E-commerce React",
@@ -64,7 +64,7 @@ export const projects = {
         "Fullstack platform using QR codes and facial recognition to manage access, user roles, and notifications. Explores integrating hardware and software to improve security and management in gyms.",
       role: "Fullstack Developer",
       tech: ["nodejs", "postgresql"],
-      repo: "https://github.com/florencialucero11/gymaccess",
+      repo: "https://github.com/florencialucero11/gymaccess/",
     },
   ],
 };
