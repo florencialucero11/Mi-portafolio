@@ -1,17 +1,20 @@
 export const contact = {
   es: {
     title: "Conectemos",
-    description: "Si querés colaborar, compartir ideas, o simplemente decir hola, ¡me encantaría saber de vos! Estoy siempre abierta a nuevos desafíos y proyectos que generen impacto positivo.",
+    description: "Si querés crear algo juntos, compartir ideas disruptivas o simplemente saludar, ¡me encantaría saber de vos! Siempre busco nuevos proyectos que mezclen tecnología, creatividad e impacto positivo.",
+    projectsLinkText: "Mis proyectos",
     form: {
       name: "Tu nombre",
       email: "Tu email",
       message: "Tu mensaje",
       send: "Enviar mensaje"
     }
+
   },
   en: {
     title: "Let's connect",
-    description: "If you'd like to collaborate, share ideas, or just say hello, I'd love to hear from you! I'm always open to new challenges and projects that create a positive impact.",
+    description: "If you'd like to build something together, share disruptive ideas, or just say hello, I'd love to hear from you! I'm always looking for projects that combine technology, creativity, and positive impact.",
+    projectsLinkText: "My projects",
     form: {
       name: "Your name",
       email: "Your email",

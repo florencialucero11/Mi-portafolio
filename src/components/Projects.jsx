@@ -1,5 +1,9 @@
 import { Icon } from '@iconify/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 
 const techIcons = {
   react: 'logos:react',
@@ -28,15 +32,17 @@ export default function Projects({ t, projectList }) {
       </h2>
 
       <Swiper
-        spaceBetween={20}
-        slidesPerView={1.1}
-        breakpoints={{
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 2.5 }
-        }}
-        className="!pb-6"
-      >
+          modules={[Navigation]}
+          navigation={true}
+          spaceBetween={20}
+          slidesPerView={1.1}
+          breakpoints={{
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.5 }
+          }}
+          className="!pb-6"
+        >
         {projectList.map((proj, idx) => (
           <SwiperSlide key={idx}>
             <div className="flex flex-col justify-between bg-bgDarker/70 border border-primary rounded-3xl 

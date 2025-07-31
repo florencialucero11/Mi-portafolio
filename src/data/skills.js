@@ -2,13 +2,13 @@ export const skillsTexts = {
   es: {
     title: "Habilidades Técnicas",
     description:
-      "Con estas herramientas y tecnologías, transformo ideas en soluciones reales que impactan y conectan. Cada skill es una pieza del motor que me impulsa a crear y aprender sin parar.",
+      "Estas tecnologías son mi caja de herramientas para transformar ideas en soluciones reales, creativas e innovadoras. Cada skill suma al motor que me impulsa a investigar, experimentar y seguir aprendiendo cada día.",
     ariaLabel: "Lista de habilidades"
   },
   en: {
     title: "Technical Skills",
     description:
-      "With these tools and technologies, I turn ideas into real solutions that connect and make an impact. Each skill is a piece of the engine that drives me to keep creating and learning nonstop.",
+      "These technologies are my toolkit to turn ideas into real, creative and innovative solutions. Each skill adds to the engine that drives me to research, experiment, and keep learning every day.",
     ariaLabel: "Skills list"
   }
 };

@@ -1,0 +1,29 @@
+---
+const { t } = Astro.props;
+---
+
+<section id="hero" class="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-12 px-8 
+  bg-gradient-to-r from-[var(--bg-section)] to-[var(--bg)] overflow-hidden">
+  <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
+    <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryLight animate-pulse">
+      {t.title}
+    </h1>
+    <p class="mt-4 text-[var(--text-soft)] text-lg md:text-xl italic">
+      {t.subtitle}
+    </p>
+    <div class="mt-6 flex gap-4">
+      <a href="#projects" class="px-4 py-2 bg-primary text-bgDarker rounded-full font-semibold hover:bg-primaryLight transition-colors">
+        {t.viewProjects}
+      </a>
+    </div>
+  </div>
+
+  <div class="relative max-w-[12rem] md:max-w-[16rem]">
+    <img 
+      src="/avatar4.png" 
+      alt="Florencia Lucero"
+      class="rounded-full shadow-2xl hover:scale-110 transition-transform duration-500 animate-avatarIntro"
+    />
+    <div class="absolute inset-0 rounded-full bg-primary opacity-25 blur-3xl animate-pulse"></div>
+  </div>
+</section>

@@ -1,32 +1,27 @@
 ---
-import Header from './_Header.astro';
-import Footer from './_Footer.astro';
-import Contact from './_Contact.astro';
-import Hero from './_Hero.astro';
+import Header from '../_Header.astro';
+import Footer from '../_Footer.astro';
+import Contact from '../_Contact.astro';
+import Hero from '../_Hero.astro';
+import About from '../../components/About.jsx';
+import Projects from '../../components/Projects.jsx';
+import Skills from '../../components/Skills.jsx';
+import Labs from '../../components/Labs.jsx';
 
-import About from '../components/About.jsx';
-import Projects from '../components/Projects.jsx';
-import Skills from '../components/Skills.jsx';
-import Labs from '../components/Labs.jsx';
+import { texts } from '../../data/texts.js';
+import { projects } from '../../data/projects.js';
+import { projectsTexts } from '../../data/projectsTexts.js';
+import { labsTexts } from '../../data/labsTexts.js';
+import { header } from '../../data/header.js';
+import { heroTexts } from '../../data/heroTexts.js';
+import { skillsTexts } from '../../data/skills.js';
+import { labs } from '../../data/labs.js';
+import { contact } from '../../data/contact.js';
+import { footer } from '../../data/footer.js';
 
+import '../../styles/global.css';
 
-
-
-import { texts } from '../data/texts.js';
-import { projects } from '../data/projects.js';
-import { projectsTexts } from '../data/projectsTexts.js';
-import { labsTexts } from '../data/labsTexts.js';
-import { header } from '../data/header.js';
-import { heroTexts } from '../data/heroTexts.js';
-import { skillsTexts } from '../data/skills.js';
-import { labs } from '../data/labs.js';
-import { contact } from '../data/contact.js';
-import { footer } from '../data/footer.js';
-
-import '../styles/global.css';
-
-const lang = 'es';
-
+const lang = 'en';
 
 const tLabs = labsTexts[lang];
 const labList = labs[lang];
@@ -36,7 +31,7 @@ const tAbout = texts[lang];
 const tProjects = projectsTexts[lang];
 const projectList = projects[lang];
 const tSkills = skillsTexts[lang];
-const tContact = contact[lang] || contact['es']; 
+const tContact = contact[lang];
 const tFooter = footer[lang];
 ---
 <!DOCTYPE html>
@@ -48,21 +43,17 @@ const tFooter = footer[lang];
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   </head>
   <body class="bg-[var(--bg)] text-[var(--text)] transition-colors duration-500">
-
     <Header t={tHeader} lang={lang} />
-
     <main class="max-w-6xl mx-auto px-4 space-y-12">
       <Hero t={tHero} />
+
       <About t={tAbout} lang={lang} client:load />
       <Projects t={tProjects} projectList={projectList} client:load />
       <Skills t={tSkills} lang={lang} client:load />
       <Labs t={tLabs} labList={labList} client:load />
-      
       <Contact t={tContact} lang={lang} />
     </main>
-
     <Footer t={tFooter} lang={lang} />
-
     <script src="/projects-scroll.js" defer></script>
   </body>
 </html>

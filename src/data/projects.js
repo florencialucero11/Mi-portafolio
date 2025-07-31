@@ -3,7 +3,7 @@ export const projects = {
     {
       title: "Impulsá Tu Vida",
       description:
-        "App fullstack que ayuda a planificar la vida personal combinando IA, automatización y visualizaciones modernas.",
+        "App fullstack que ayuda a planificar la vida personal combinando inteligencia artificial, automatización y visualizaciones modernas. Un prototipo que explora cómo la tecnología puede impulsar hábitos, objetivos y bienestar diario.",
       role: "Desarrolladora Fullstack",
       tech: ["react", "nextjs", "fastapi", "postgresql"],
       repo: "https://impulsa-tu-vida.vercel.app/",
@@ -11,15 +11,15 @@ export const projects = {
     {
       title: "AI Resume Analyzer",
       description:
-        "Plataforma que analiza CVs y da feedback personalizado para mejorar compatibilidad con perfiles IT y otros rubros.",
-      role: "Desarrolladora Frontend & backend Python",
+        "Plataforma experimental que analiza CVs con IA y brinda feedback personalizado para mejorar la compatibilidad con perfiles IT y otros rubros. Un proyecto de investigación sobre cómo la inteligencia artificial puede optimizar procesos de selección.",
+      role: "Desarrolladora Frontend & Backend Python",
       tech: ["react", "python"],
       repo: "https://github.com/florencialucero11/ai-resume-analyzer",
     },
     {
       title: "E-commerce React",
       description:
-        "Tienda online desarrollada en React para aprender gestión de productos, carrito y lógica de compras.",
+        "Tienda online desarrollada en React para practicar la gestión de productos, carrito de compras y lógica de pagos. Un ejercicio práctico que une diseño UI, experiencia de usuario y lógica de negocio.",
       role: "Desarrolladora Frontend",
       tech: ["react", "css"],
       repo: "https://gym-e-commerce.netlify.app/",
@@ -27,7 +27,7 @@ export const projects = {
     {
       title: "Control de Accesos Gym",
       description:
-        "Plataforma con código QR y reconocimiento facial para controlar accesos, roles de usuario y notificaciones.",
+        "Plataforma fullstack que utiliza código QR y reconocimiento facial para controlar accesos, gestionar roles de usuario y enviar notificaciones. Explora cómo integrar hardware y software para mejorar la seguridad y la gestión de gimnasios.",
       role: "Desarrolladora Fullstack",
       tech: ["nodejs", "postgresql"],
       repo: "https://github.com/florencialucero11/control-accesos-gym",
@@ -35,17 +35,17 @@ export const projects = {
   ],
   en: [
     {
-      title: "Impulsá Tu Vida",
+      title: "Boost Your Life",
       description:
-        "Fullstack app that helps plan personal life by combining AI, automation, and modern visualizations.",
+        "Fullstack app that helps plan personal life by combining artificial intelligence, automation, and modern visualizations. A prototype exploring how technology can boost daily habits, goals, and overall well-being.",
       role: "Fullstack Developer",
       tech: ["react", "nextjs", "fastapi", "postgresql"],
-      repo: "https://github.com/florencialucero11/impulsatuvida",
+      repo: "https://impulsa-tu-vida.vercel.app/",
     },
     {
       title: "AI Resume Analyzer",
       description:
-        "Platform that analyzes resumes and gives personalized feedback to improve compatibility with IT and other profiles.",
+        "Experimental platform that uses AI to analyze resumes and deliver personalized feedback to improve compatibility with IT and other job profiles. A research project exploring how artificial intelligence can optimize hiring processes.",
       role: "Frontend & Python Backend Developer",
       tech: ["react", "python"],
       repo: "https://github.com/florencialucero11/ai-resume-analyzer",
@@ -53,15 +53,15 @@ export const projects = {
     {
       title: "E-commerce React",
       description:
-        "Online store built with React to learn product management, shopping cart and purchase logic.",
+        "Online store built with React to practice product management, shopping cart, and payment logic. A practical exercise that combines UI design, user experience, and business logic.",
       role: "Frontend Developer",
       tech: ["react", "css"],
-      repo: "https://github.com/florencialucero11/ecommerce-react",
+      repo: "https://gym-e-commerce.netlify.app/",
     },
     {
       title: "Gym Access Control",
       description:
-        "Platform with QR code and facial recognition to manage access, user roles, and notifications.",
+        "Fullstack platform using QR codes and facial recognition to manage access, user roles, and notifications. Explores integrating hardware and software to improve security and management in gyms.",
       role: "Fullstack Developer",
       tech: ["nodejs", "postgresql"],
       repo: "https://github.com/florencialucero11/control-accesos-gym",

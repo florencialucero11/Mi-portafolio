@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --bg-darker: #f5f5f5;
-  --color-primary: #3b82f6;
-  --color-primary-light: #60a5fa;
-  --color-text: #1f2937;
+  --bg: theme('colors.bgLightest');   /* fondo claro por defecto */
+  --bg-section: theme('colors.bgLighter');
+  --text: theme('colors.textDark');
+  --text-soft: theme('colors.textSoft');
+  --primary: theme('colors.primary');
+  --primary-light: theme('colors.primaryLight');
 }
 
-
-.dark .bg-bgDarker {
-  background-color: rgb(102, 98, 98);
+.dark {
+  --bg: theme('colors.bgDarker');
+  --bg-section: theme('colors.bgLight'); 
+  --text: theme('colors.text');
+  --text-soft: theme('colors.textLight');
 }
+
 
 
 .tech-icons img {
@@ -106,4 +111,16 @@ html {
 }
 html {
   scroll-behavior: smooth;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #00e5d4; /* tu color primary */
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
 }

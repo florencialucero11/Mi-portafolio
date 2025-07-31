@@ -1,4 +1,4 @@
-export default function About({ t }) {
+export default function About({ t,  lang }) {
   return (
     <section 
       id="about" 

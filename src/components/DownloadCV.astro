@@ -1,6 +1,9 @@
 ---
+import { header } from '../data/header.js';
+
+const lang = (Astro.url.searchParams.get("lang") === 'en') ? 'en' : 'es';
 ---
-<a href="/Lucero Florencia-at.pdf" download
+<a href="/Florencia lucero.pdf" download
    class="px-4 py-2 bg-primary text-bg-darker rounded-lg font-semibold shadow-glow hover:bg-primaryLight transition-colors duration-300">
-  Descargar CV
+  {header[lang].downloadCV}
 </a>

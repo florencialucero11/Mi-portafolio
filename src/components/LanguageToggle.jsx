@@ -1,20 +1,29 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 
-export default function LanguageToggle({ lang }) {
+export default function LanguageToggle( {lang }) {
+  const [isEnglish, setIsEnglish] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsEnglish(window.location.pathname.startsWith('/en'));
+    }
+  }, []);
+
   const toggleLang = () => {
-    const newLang = lang === 'es' ? 'en' : 'es';
-    localStorage.setItem('preferredLang', newLang);
-    const url = new URL(window.location);
-    url.searchParams.set('lang', newLang);
-    window.location = url.toString(); 
+    if (isEnglish) {
+      window.location.href = '/';
+    } else {
+      window.location.href = '/en/';
+    }
   };
 
   return (
     <button
       onClick={toggleLang}
-      className="px-3 py-1 rounded-full bg-primary text-bgDarker text-sm font-semibold hover:bg-primaryLight transition-colors"
+      className="px-2 py-1 text-sm border border-primary rounded hover:bg-primary hover:text-bgDarker transition"
     >
-      {lang === 'es' ? 'EN' : 'ES'}
+      {isEnglish ? 'ES' : 'EN'}
     </button>
   );
 }
+
