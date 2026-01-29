@@ -3,10 +3,13 @@ export const projects = {
     {
       title: "Impulsá Tu Vida",
       description:
-        "App fullstack que ayuda a planificar la vida personal combinando inteligencia artificial, automatización y visualizaciones modernas. Un prototipo que explora cómo la tecnología puede impulsar hábitos, objetivos y bienestar diario.",
-      role: "Desarrolladora Fullstack",
+        "Aplicación web que ayuda a usuarios a planificar y alcanzar objetivos personales mediante planes personalizados generados con automatización y lógica asistida. Incluye categorías de objetivos, sugerencias inteligentes y una experiencia responsive.Muchas personas luchan por estructurar y organizar sus metas personales (salud, finanzas, productividad, bienestar) en un solo lugar y obtener pasos concretos para alcanzarlas. Este proyecto busca resolver esa falta de claridad y apoyo personalizado mediante automatización inteligente.",
+      role: "Desarrollé tanto la interfaz de usuario como la lógica de automatización. Me encargué de:• Diseño y arquitectura del frontend responsivo• Integración de funciones de IA y automatización• Gestión de estado y experiencia de uso• Despliegue y hosting en Vercel.",
+
       tech: ["react", "nextjs", "fastapi", "postgresql"],
-      repo: "https://impulsa-tu-vida.vercel.app/",
+      demo: "https://impulsa-tu-vida.vercel.app/",
+      repo: "https://github.com/florencialucero11/ImpulsaTuVida",
+      image: "../hero-impuls.png"
     },
     {
       title: "AI Resume Analyzer",
@@ -35,11 +38,11 @@ export const projects = {
   ],
   en: [
     {
-      title: "Boost Your Life",
+      title: "AI-powered life planning web app",
       description:
-        "Fullstack app that helps plan personal life by combining artificial intelligence, automation, and modern visualizations. A prototype exploring how technology can boost daily habits, goals, and overall well-being.",
+        "Fullstack web application that helps users plan goals and habits using AI, automation and data visualization. People struggle to organize goals, habits and priorities in one place.This application centralizes planning and uses AI to provide personalized guidance.",
       role: "Fullstack Developer",
-      tech: ["react", "nextjs", "fastapi", "postgresql"],
+      tech: ["Next.js", " React ·", "FastAPI ·", "PostgreSQL ·", "OpenAI API ·", "n8n"],
       repo: "https://impulsa-tu-vida.vercel.app/",
     },
     {

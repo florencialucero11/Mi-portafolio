@@ -1,12 +1,14 @@
 export const heroTexts = {
   es: {
-    title: "Exploro, creo y prototipo ideas con IA & visualización de datos",
-    subtitle: "Desarrolladora fullstack que mezcla curiosidad, investigación y tecnología para transformar ideas en soluciones reales.",
+    title: "Web Developer especializada en frontend moderno y automatización con IA",
+    subtitle:
+      "Diseño y desarrollo aplicaciones web y landing pages que convierten visitas en resultados, integrando IA para optimizar procesos.",
     viewProjects: "Ver proyectos"
   },
   en: {
-    title: "I explore, create and prototype ideas with AI & data visualization",
-    subtitle: "Fullstack developer blending curiosity, research and technology to turn ideas into real solutions.",
+    title: "Web Developer specialized in modern frontend and AI-powered automation",
+    subtitle:
+      "I design and build web applications and landing pages focused on conversion and scalable AI integrations.",
     viewProjects: "View projects"
   }
 };

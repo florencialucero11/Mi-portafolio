@@ -23,8 +23,8 @@ import 'swiper/css'; // solo el core, nada más
 
 export default function Projects({ t, projectList }) {
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className="relative py-16 px-10 bg-gradient-to-b from-bgDarker/90 to-bgDarkest/80 max-w-5xl mx-auto"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryLight mb-10 text-center">
@@ -32,44 +32,80 @@ export default function Projects({ t, projectList }) {
       </h2>
 
       <Swiper
-          modules={[Navigation]}
-          navigation={true}
-          spaceBetween={20}
-          slidesPerView={1.1}
-          breakpoints={{
-            640: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2.5 }
-          }}
-          className="!pb-6"
-        >
+        modules={[Navigation]}
+        navigation
+        spaceBetween={20}
+        slidesPerView={1.1}
+        breakpoints={{
+          640: { slidesPerView: 1.5 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 2.5 }
+        }}
+        className="!pb-6"
+      >
         {projectList.map((proj, idx) => (
           <SwiperSlide key={idx}>
-            <div className="flex flex-col justify-between bg-bgDarker/70 border border-primary rounded-3xl 
-                            p-6 shadow-neumorph hover:shadow-glow hover:scale-105 transition-transform duration-300">
-              <div>
-                <h3 className="text-primaryLight font-bold text-xl mb-3">{proj.title}</h3>
-                <p className="text-textLight mb-4">{proj.description}</p>
+            <div className="flex flex-col bg-bgDarker/70 border border-primary rounded-3xl 
+                            overflow-hidden shadow-neumorph hover:shadow-glow hover:scale-105 
+                            transition-transform duration-300">
+
+              {/* 🟣 IMAGE */}
+              {proj.image && (
+                <img
+                  src={proj.image}
+                  alt={`${proj.title} preview`}
+                  className="h-40 w-full object-cover"
+                />
+              )}
+
+              <div className="flex flex-col justify-between p-6 h-full">
+                <div>
+                  <h3 className="text-primaryLight font-bold text-xl mb-3">
+                    {proj.title}
+                  </h3>
+                  <p className="text-textLight mb-4">
+                    {proj.description}
+                  </p>
+                </div>
+
+                {/* 🟣 TECH ICONS */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {proj.tech.map((tech, i) => (
+                    <Icon
+                      key={i}
+                      icon={techIcons[tech] || 'mdi:code-tags'}
+                      className="text-primaryLight text-2xl"
+                      title={tech}
+                    />
+                  ))}
+                </div>
+
+                {/* 🟣 ACTION BUTTONS */}
+                <div className="flex gap-3">
+                  {proj.demo && (
+                    <a
+                      href={proj.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center bg-primary text-bgDarkest rounded-lg 
+                                 px-3 py-2 text-sm font-semibold hover:bg-primaryLight transition-colors"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+
+                  <a
+                    href={proj.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center border border-primaryLight text-primaryLight 
+                               rounded-lg px-3 py-2 text-sm font-medium hover:bg-primaryLight 
+                               hover:text-bgDarkest transition-colors"
+                  >
+                    {t.viewRepo || "Ver repositorio"}
+                  </a>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {proj.tech.map((tech, i) => (
-                  <Icon
-                    key={i}
-                    icon={techIcons[tech] || 'mdi:code-tags'}
-                    className="text-primaryLight text-2xl"
-                    title={tech}
-                  />
-                ))}
-              </div>
-              <a 
-                href={proj.repo} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-primaryLight border border-primaryLight rounded-lg 
-                           px-3 py-1 text-sm font-medium hover:bg-primaryLight hover:text-bgDarkest transition-colors"
-              >
-                {t.viewRepo || "Ver repositorio"}
-              </a>
             </div>
           </SwiperSlide>
         ))}
