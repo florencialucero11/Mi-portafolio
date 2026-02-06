@@ -1,9 +1,10 @@
 import { Icon } from '@iconify/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import ExpandableText from './ExpandableText';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
-
 
 const techIcons = {
   react: 'logos:react',
@@ -18,8 +19,6 @@ const techIcons = {
   git: 'logos:git-icon',
   javascript: 'logos:javascript'
 };
-
-import 'swiper/css'; // solo el core, nada más
 
 export default function Projects({ t, projectList }) {
   return (
@@ -44,12 +43,14 @@ export default function Projects({ t, projectList }) {
         className="!pb-6"
       >
         {projectList.map((proj, idx) => (
-          <SwiperSlide key={idx}>
+          <SwiperSlide key={idx} className="h-auto">
+            
+            {/* CARD BASE */}
             <div className="flex flex-col bg-bgDarker/70 border border-primary rounded-3xl 
-                            overflow-hidden shadow-neumorph hover:shadow-glow hover:scale-105 
-                            transition-transform duration-300">
+                            overflow-hidden shadow-neumorph hover:shadow-glow 
+                            hover:-translate-y-2 transition-all duration-300 h-full">
 
-              {/* 🟣 IMAGE */}
+              {/* IMAGE */}
               {proj.image && (
                 <img
                   src={proj.image}
@@ -58,18 +59,20 @@ export default function Projects({ t, projectList }) {
                 />
               )}
 
-              <div className="flex flex-col justify-between p-6 h-full">
+              {/* CONTENT */}
+              <div className="flex flex-col p-6 flex-grow">
+
+                {/* TEXT BLOCK */}
                 <div>
                   <h3 className="text-primaryLight font-bold text-xl mb-3">
                     {proj.title}
                   </h3>
-                  <p className="text-textLight mb-4">
-                    {proj.description}
-                  </p>
+
+                  <ExpandableText text={proj.description} />
                 </div>
 
-                {/* 🟣 TECH ICONS */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* TECH ICONS */}
+                <div className="flex flex-wrap gap-2 mt-4">
                   {proj.tech.map((tech, i) => (
                     <Icon
                       key={i}
@@ -80,8 +83,8 @@ export default function Projects({ t, projectList }) {
                   ))}
                 </div>
 
-                {/* 🟣 ACTION BUTTONS */}
-                <div className="flex gap-3">
+                {/* BUTTONS — SIEMPRE ABAJO */}
+                <div className="flex gap-3 mt-auto pt-6">
                   {proj.demo && (
                     <a
                       href={proj.demo}
@@ -105,8 +108,10 @@ export default function Projects({ t, projectList }) {
                     {t.viewRepo || "Ver repositorio"}
                   </a>
                 </div>
+
               </div>
             </div>
+
           </SwiperSlide>
         ))}
       </Swiper>

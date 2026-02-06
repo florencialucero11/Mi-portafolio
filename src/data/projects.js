@@ -43,7 +43,9 @@ export const projects = {
         "Fullstack web application that helps users plan goals and habits using AI, automation and data visualization. People struggle to organize goals, habits and priorities in one place.This application centralizes planning and uses AI to provide personalized guidance.",
       role: "Fullstack Developer",
       tech: ["Next.js", " React ·", "FastAPI ·", "PostgreSQL ·", "OpenAI API ·", "n8n"],
-      repo: "https://impulsa-tu-vida.vercel.app/",
+      demo: "https://impulsa-tu-vida.vercel.app/",
+      repo: "https://github.com/florencialucero11/ImpulsaTuVida",
+      image: "../hero-impuls.png"
     },
     {
       title: "AI Resume Analyzer",
