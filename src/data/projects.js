@@ -25,7 +25,9 @@ export const projects = {
         "Tienda online desarrollada en React para practicar la gestión de productos, carrito de compras y lógica de pagos. Un ejercicio práctico que une diseño UI, experiencia de usuario y lógica de negocio.",
       role: "Desarrolladora Frontend",
       tech: ["react", "css"],
-      repo: "https://gym-e-commerce.netlify.app/",
+      demo: "https://gym-e-commerce.netlify.app/",
+      repo: "https://github.com/florencialucero11/GymProject",
+      image: "../gymStore.png"
     },
     {
       title: "Control de Accesos Gym",

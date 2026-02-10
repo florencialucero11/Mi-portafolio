@@ -3,7 +3,7 @@ import { header } from '../data/header.js';
 
 const lang = (Astro.url.searchParams.get("lang") === 'en') ? 'en' : 'es';
 ---
-<a href="/Florencia lucero.pdf" download
+<a href="/Fullstack-Florencia-Lucero.pdf" download
    class="px-4 py-2 bg-primary text-bg-darker rounded-lg font-semibold shadow-glow hover:bg-primaryLight transition-colors duration-300">
   {header[lang].downloadCV}
 </a>
